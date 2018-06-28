@@ -5,9 +5,15 @@
   <artifactId>training-app</artifactId>
   <packaging>jar</packaging>
 
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>training-app</name>
   <url>http://maven.apache.org</url>
+  <scm>
+    <connection>scm:git:https://github.com/jeromenaylies/training-app.git</connection>
+    <developerConnection>scm:git:https://github.com/jeromenaylies/training-app.git</developerConnection>
+    <url>https://github.com/jeromenaylies/training-app</url>
+    <tag>master</tag>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -81,6 +87,26 @@
         </execution>
       </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.10.0</version>
+        <configuration>
+          <goals>install</goals>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+ <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Releases</name>
+      <url>http://localhost:8085/repository/maven-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>Snapshot</name>
+      <url>http://localhost:8085/repository/maven-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
