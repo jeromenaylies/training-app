@@ -97,6 +97,7 @@
       </plugin>
     </plugins>
   </build>
+  <!-- Pour integration dans Nexus -->
  <distributionManagement>
     <repository>
       <id>nexus</id>
