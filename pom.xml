@@ -9,6 +9,7 @@
   <name>training-app</name>
   <url>http://maven.apache.org</url>
   <scm>
+    
     <connection>scm:git:https://github.com/jeromenaylies/training-app.git</connection>
     <developerConnection>scm:git:https://github.com/jeromenaylies/training-app.git</developerConnection>
     <url>https://github.com/jeromenaylies/training-app</url>
