@@ -8,6 +8,14 @@ node {
       // **       in the global configuration.           
       mvnHome = tool 'MAVEN 3'
    }
+   stage('SonarQube analysis') {
+    // Run the maven build
+    if (isUnix()) {
+      sh "'${mvnHome}/bin/mvn' -B sonar:sonar"
+    } else {
+      bat(/"${mvnHome}\bin\mvn" -B sonar:sonar/)
+    }
+   }
    stage('Build') {
       // Run the maven build
       if (isUnix()) {
