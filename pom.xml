@@ -116,6 +116,7 @@
       <name>Snapshot</name>
       <!-- url>http://10.29.137.222:8081//repository/maven-snapshots</url -->
       <url>http://localhost:8085//repository/maven-snapshots</url>
+      
     </snapshotRepository>
   </distributionManagement>
 </project>
